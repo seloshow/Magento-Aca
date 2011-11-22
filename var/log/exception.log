@@ -1,0 +1,60 @@
+2011-11-22T14:17:52+00:00 ERR (3): 
+exception 'Exception' with message 'Warning: simplexml_load_string() [<a href='function.simplexml-load-string'>function.simplexml-load-string</a>]: Entity: line 49: parser error : expected '&gt;'  in C:\Program Files\Zend\Apache2\htdocs\local.magentoacademy.com\app\code\core\Mage\Core\Model\Layout\Update.php on line 431' in C:\Program Files\Zend\Apache2\htdocs\local.magentoacademy.com\app\code\core\Mage\Core\functions.php:245
+Stack trace:
+#0 [internal function]: mageCoreErrorHandler(2, 'simplexml_load_...', 'C:\Program File...', 431, Array)
+#1 C:\Program Files\Zend\Apache2\htdocs\local.magentoacademy.com\app\code\core\Mage\Core\Model\Layout\Update.php(431): simplexml_load_string('<?xml version="...', 'Mage_Core_Model...')
+#2 C:\Program Files\Zend\Apache2\htdocs\local.magentoacademy.com\app\code\core\Mage\Core\Model\Layout\Update.php(273): Mage_Core_Model_Layout_Update->getFileLayoutUpdatesXml('frontend', 'academy', 'default', '1')
+#3 C:\Program Files\Zend\Apache2\htdocs\local.magentoacademy.com\app\code\core\Mage\Core\Model\Layout\Update.php(345): Mage_Core_Model_Layout_Update->fetchFileLayoutUpdates()
+#4 C:\Program Files\Zend\Apache2\htdocs\local.magentoacademy.com\app\code\core\Mage\Core\Model\Layout\Update.php(246): Mage_Core_Model_Layout_Update->fetchPackageLayoutUpdates('default')
+#5 C:\Program Files\Zend\Apache2\htdocs\local.magentoacademy.com\app\code\core\Mage\Core\Model\Layout\Update.php(224): Mage_Core_Model_Layout_Update->merge('default')
+#6 C:\Program Files\Zend\Apache2\htdocs\local.magentoacademy.com\app\code\core\Mage\Core\Controller\Varien\Action.php(307): Mage_Core_Model_Layout_Update->load()
+#7 C:\Program Files\Zend\Apache2\htdocs\local.magentoacademy.com\app\code\core\Mage\Catalog\Helper\Product\View.php(61): Mage_Core_Controller_Varien_Action->loadLayoutUpdates()
+#8 C:\Program Files\Zend\Apache2\htdocs\local.magentoacademy.com\app\code\core\Mage\Catalog\Helper\Product\View.php(144): Mage_Catalog_Helper_Product_View->initProductLayout(Object(Mage_Catalog_Model_Product), Object(Mage_Catalog_ProductController))
+#9 C:\Program Files\Zend\Apache2\htdocs\local.magentoacademy.com\app\code\core\Mage\Catalog\controllers\ProductController.php(132): Mage_Catalog_Helper_Product_View->prepareAndRender(16, Object(Mage_Catalog_ProductController), Object(Varien_Object))
+#10 C:\Program Files\Zend\Apache2\htdocs\local.magentoacademy.com\app\code\core\Mage\Core\Controller\Varien\Action.php(420): Mage_Catalog_ProductController->viewAction()
+#11 C:\Program Files\Zend\Apache2\htdocs\local.magentoacademy.com\app\code\core\Mage\Core\Controller\Varien\Router\Standard.php(250): Mage_Core_Controller_Varien_Action->dispatch('view')
+#12 C:\Program Files\Zend\Apache2\htdocs\local.magentoacademy.com\app\code\core\Mage\Core\Controller\Varien\Front.php(176): Mage_Core_Controller_Varien_Router_Standard->match(Object(Mage_Core_Controller_Request_Http))
+#13 C:\Program Files\Zend\Apache2\htdocs\local.magentoacademy.com\app\code\core\Mage\Core\Model\App.php(349): Mage_Core_Controller_Varien_Front->dispatch()
+#14 C:\Program Files\Zend\Apache2\htdocs\local.magentoacademy.com\app\Mage.php(640): Mage_Core_Model_App->run(Array)
+#15 C:\Program Files\Zend\Apache2\htdocs\local.magentoacademy.com\index.php(82): Mage::run('', 'store')
+#16 {main}
+2011-11-22T15:43:01+00:00 ERR (3): 
+exception 'Mage_Core_Exception' with message 'Invalid block type: ' in C:\Program Files\Zend\Apache2\htdocs\local.magentoacademy.com\app\Mage.php:563
+Stack trace:
+#0 C:\Program Files\Zend\Apache2\htdocs\local.magentoacademy.com\app\code\core\Mage\Core\Model\Layout.php(469): Mage::throwException('Invalid block t...')
+#1 C:\Program Files\Zend\Apache2\htdocs\local.magentoacademy.com\app\code\core\Mage\Core\Model\Layout.php(411): Mage_Core_Model_Layout->_getBlockInstance('', Array)
+#2 C:\Program Files\Zend\Apache2\htdocs\local.magentoacademy.com\app\code\core\Mage\Core\Model\Layout.php(446): Mage_Core_Model_Layout->createBlock('', 'magentoacademy_...')
+#3 C:\Program Files\Zend\Apache2\htdocs\local.magentoacademy.com\app\code\core\Mage\Core\Model\Layout.php(238): Mage_Core_Model_Layout->addBlock('', 'magentoacademy_...')
+#4 C:\Program Files\Zend\Apache2\htdocs\local.magentoacademy.com\app\code\core\Mage\Core\Model\Layout.php(204): Mage_Core_Model_Layout->_generateBlock(Object(Mage_Core_Model_Layout_Element), Object(Mage_Core_Model_Layout_Element))
+#5 C:\Program Files\Zend\Apache2\htdocs\local.magentoacademy.com\app\code\core\Mage\Core\Model\Layout.php(209): Mage_Core_Model_Layout->generateBlocks(Object(Mage_Core_Model_Layout_Element))
+#6 C:\Program Files\Zend\Apache2\htdocs\local.magentoacademy.com\app\code\core\Mage\Core\Controller\Varien\Action.php(345): Mage_Core_Model_Layout->generateBlocks()
+#7 C:\Program Files\Zend\Apache2\htdocs\local.magentoacademy.com\app\code\core\Mage\Catalog\Helper\Product\View.php(73): Mage_Core_Controller_Varien_Action->generateLayoutBlocks()
+#8 C:\Program Files\Zend\Apache2\htdocs\local.magentoacademy.com\app\code\core\Mage\Catalog\Helper\Product\View.php(144): Mage_Catalog_Helper_Product_View->initProductLayout(Object(Mage_Catalog_Model_Product), Object(Mage_Catalog_ProductController))
+#9 C:\Program Files\Zend\Apache2\htdocs\local.magentoacademy.com\app\code\core\Mage\Catalog\controllers\ProductController.php(132): Mage_Catalog_Helper_Product_View->prepareAndRender(166, Object(Mage_Catalog_ProductController), Object(Varien_Object))
+#10 C:\Program Files\Zend\Apache2\htdocs\local.magentoacademy.com\app\code\core\Mage\Core\Controller\Varien\Action.php(420): Mage_Catalog_ProductController->viewAction()
+#11 C:\Program Files\Zend\Apache2\htdocs\local.magentoacademy.com\app\code\core\Mage\Core\Controller\Varien\Router\Standard.php(250): Mage_Core_Controller_Varien_Action->dispatch('view')
+#12 C:\Program Files\Zend\Apache2\htdocs\local.magentoacademy.com\app\code\core\Mage\Core\Controller\Varien\Front.php(176): Mage_Core_Controller_Varien_Router_Standard->match(Object(Mage_Core_Controller_Request_Http))
+#13 C:\Program Files\Zend\Apache2\htdocs\local.magentoacademy.com\app\code\core\Mage\Core\Model\App.php(349): Mage_Core_Controller_Varien_Front->dispatch()
+#14 C:\Program Files\Zend\Apache2\htdocs\local.magentoacademy.com\app\Mage.php(640): Mage_Core_Model_App->run(Array)
+#15 C:\Program Files\Zend\Apache2\htdocs\local.magentoacademy.com\index.php(82): Mage::run('', 'store')
+#16 {main}
+2011-11-22T15:43:19+00:00 ERR (3): 
+exception 'Mage_Core_Exception' with message 'Invalid block type: ' in C:\Program Files\Zend\Apache2\htdocs\local.magentoacademy.com\app\Mage.php:563
+Stack trace:
+#0 C:\Program Files\Zend\Apache2\htdocs\local.magentoacademy.com\app\code\core\Mage\Core\Model\Layout.php(469): Mage::throwException('Invalid block t...')
+#1 C:\Program Files\Zend\Apache2\htdocs\local.magentoacademy.com\app\code\core\Mage\Core\Model\Layout.php(411): Mage_Core_Model_Layout->_getBlockInstance('', Array)
+#2 C:\Program Files\Zend\Apache2\htdocs\local.magentoacademy.com\app\code\core\Mage\Core\Model\Layout.php(446): Mage_Core_Model_Layout->createBlock('', 'magentoacademy_...')
+#3 C:\Program Files\Zend\Apache2\htdocs\local.magentoacademy.com\app\code\core\Mage\Core\Model\Layout.php(238): Mage_Core_Model_Layout->addBlock('', 'magentoacademy_...')
+#4 C:\Program Files\Zend\Apache2\htdocs\local.magentoacademy.com\app\code\core\Mage\Core\Model\Layout.php(204): Mage_Core_Model_Layout->_generateBlock(Object(Mage_Core_Model_Layout_Element), Object(Mage_Core_Model_Layout_Element))
+#5 C:\Program Files\Zend\Apache2\htdocs\local.magentoacademy.com\app\code\core\Mage\Core\Model\Layout.php(209): Mage_Core_Model_Layout->generateBlocks(Object(Mage_Core_Model_Layout_Element))
+#6 C:\Program Files\Zend\Apache2\htdocs\local.magentoacademy.com\app\code\core\Mage\Core\Controller\Varien\Action.php(345): Mage_Core_Model_Layout->generateBlocks()
+#7 C:\Program Files\Zend\Apache2\htdocs\local.magentoacademy.com\app\code\core\Mage\Cms\Helper\Page.php(112): Mage_Core_Controller_Varien_Action->generateLayoutBlocks()
+#8 C:\Program Files\Zend\Apache2\htdocs\local.magentoacademy.com\app\code\core\Mage\Cms\Helper\Page.php(52): Mage_Cms_Helper_Page->_renderPage(Object(Mage_Cms_IndexController), 'home')
+#9 C:\Program Files\Zend\Apache2\htdocs\local.magentoacademy.com\app\code\core\Mage\Cms\controllers\IndexController.php(45): Mage_Cms_Helper_Page->renderPage(Object(Mage_Cms_IndexController), 'home')
+#10 C:\Program Files\Zend\Apache2\htdocs\local.magentoacademy.com\app\code\core\Mage\Core\Controller\Varien\Action.php(420): Mage_Cms_IndexController->indexAction()
+#11 C:\Program Files\Zend\Apache2\htdocs\local.magentoacademy.com\app\code\core\Mage\Core\Controller\Varien\Router\Standard.php(250): Mage_Core_Controller_Varien_Action->dispatch('index')
+#12 C:\Program Files\Zend\Apache2\htdocs\local.magentoacademy.com\app\code\core\Mage\Core\Controller\Varien\Front.php(176): Mage_Core_Controller_Varien_Router_Standard->match(Object(Mage_Core_Controller_Request_Http))
+#13 C:\Program Files\Zend\Apache2\htdocs\local.magentoacademy.com\app\code\core\Mage\Core\Model\App.php(349): Mage_Core_Controller_Varien_Front->dispatch()
+#14 C:\Program Files\Zend\Apache2\htdocs\local.magentoacademy.com\app\Mage.php(640): Mage_Core_Model_App->run(Array)
+#15 C:\Program Files\Zend\Apache2\htdocs\local.magentoacademy.com\index.php(82): Mage::run('', 'store')
+#16 {main}

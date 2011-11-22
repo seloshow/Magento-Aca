@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Este es el ultimo eslabon en la carga del layout. Se cargan todos los los layout y por último se carga este. -->
+<layout>
+	<default><!-- cambiar algo por defecto en todas la páginas -->
+		<reference name="right">
+			<action method="unsetChild"><!-- usaremos esto cuando queramos cargar un bloque en el futuro. -->
+				<name>right.permanent.callout</name>
+			</action><!-- Asi, quitariamos el bloque del padre, pero el bloque sigue siendo instanciado para poder ser usado en cualquier sitio -->
+		</reference>
+		<reference name="left">
+		
+<!--			<action method="setChild">-->
+<!--				<alias>right.permanent.callout</alias>-->
+<!--				<name>right.permanent.callout</name>-->
+<!--			</action>-->
+			<block type="core/template" name="right.permanent.callout" template="callouts/right_col.phtml">
+                <action method="setImgSrc"><src>images/media/col_right_callout.jpg</src></action>
+                <action method="setImgAlt" translate="alt" module="catalog"><alt>Keep your eyes open for our special Back to School items and save A LOT!</alt></action>
+            </block>
+            <block type="core/template" name="left.helloworld" template="academy/holamundo.phtml" before="-" >
+            <!-- after="left.newsletter" -->
+            	 <!-- no es necesario poner output html , por que esta en el bloque estructural left 
+            	 encontes hace el output de todos sus hijos. -->
+            	 <action method="setTexto"><texto>Hola parametro!!</texto></action> 
+            </block>
+            <!-- Viendo los parámetros que le pasamos
+            template= seleccionamos el template que queremos que utilice.
+            method: setImgSrc hará 
+            img_src  =>atributo   
+            setImgSrc =>setData('img_src')
+            getImgSrc =>getData('img_src')
+            si tiene datos el template va  a hacer un setTemplate en el constructor llamara al tipo core/template.
+             -->
+             
+		</reference>
+		<reference name="footer">
+				<block type="core/template" name="footer.hello"  template="academy/holamundo.phtml">
+                	<action method="setTexto"><texto>Hello footer!!</texto></action>
+                </block>
+		</reference>
+		<reference name="head">
+			<action method="addCss"><stylesheet>css/estilos.css</stylesheet></action>
+		</reference>
+		
+		
+	
+<!--	 		<remove name="right.permanent.callout"/> eliminamos el bloque, no hace falta hacer un reference, dado que vamos a tener tener un único bloque con este alias. -->
+		<!-- Ahora vamos a coger un bloque que este creado en el backend de Magento y lo vamos 
+		a cargar donde nosotros queramos. 
+		El bloque magentoacademy esta previamente cargado en el backend de Magento para la vista de la tiende
+		en ingles y en frances, con lo cual al seleccionar como identificador el magentoacademy buscaría en 
+		el store en el que estoy y si no estuviera lo buscaria en la vista de la tienda por defecto.-->
+		<reference name="right">
+			<block type="cms/block" name="magentoacademy">
+				<action method="setBlockId"><block_id>magentoacademy</block_id></action>
+			</block>
+		</reference>
+		
+	
+	</default>
+	<catalog_product_view><!-- si cargamos este bloque en default. -->
+		<reference name="product.info">
+			<block type="core/template" name="hello.producto"  template="academy/holamundo.phtml">
+                	<action method="setTexto"><texto>Hello producto!!</texto></action>
+            </block>
+		</reference>
+	</catalog_product_view>
+
+</layout>

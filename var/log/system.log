@@ -1,0 +1,67 @@
+2011-11-22T15:23:44+00:00 DEBUG (7): Array
+(
+    [0] => default
+    [1] => STORE_default
+    [2] => THEME_frontend_academy_default
+    [3] => catalog_category_view
+    [4] => catalog_category_layered
+    [5] => CATEGORY_10
+    [6] => customer_logged_out
+)
+
+2011-11-22T15:23:45+00:00 DEBUG (7): Array
+(
+    [0] => default
+    [1] => STORE_default
+    [2] => THEME_frontend_academy_default
+    [3] => catalog_category_view
+    [4] => catalog_category_layered
+    [5] => CATEGORY_10
+    [6] => customer_logged_out
+    [7] => MAP_popup
+    [8] => SHORTCUT_popup
+    [9] => SHORTCUT_uk_popup
+)
+
+2011-11-22T15:28:25+00:00 DEBUG (7): Array
+(
+    [0] => default
+    [1] => cms_page
+    [2] => STORE_default
+    [3] => THEME_frontend_academy_default
+    [4] => cms_index_index
+    [5] => page_two_columns_right
+    [6] => customer_logged_out
+)
+
+2011-11-22T15:28:25+00:00 DEBUG (7): <pre>1 array(7) {
+  [0] =&gt; string(7) &quot;default&quot;
+  [1] =&gt; string(8) &quot;cms_page&quot;
+  [2] =&gt; string(13) &quot;STORE_default&quot;
+  [3] =&gt; string(30) &quot;THEME_frontend_academy_default&quot;
+  [4] =&gt; string(15) &quot;cms_index_index&quot;
+  [5] =&gt; string(22) &quot;page_two_columns_right&quot;
+  [6] =&gt; string(19) &quot;customer_logged_out&quot;
+}
+</pre>
+2011-11-22T15:34:53+00:00 DEBUG (7): Array
+(
+    [0] => default
+    [1] => cms_page
+    [2] => STORE_default
+    [3] => THEME_frontend_academy_default
+    [4] => cms_index_index
+    [5] => page_two_columns_right
+    [6] => customer_logged_out
+)
+
+2011-11-22T15:34:53+00:00 DEBUG (7): <pre>1 array(7) {
+  [0] =&gt; string(7) &quot;default&quot;
+  [1] =&gt; string(8) &quot;cms_page&quot;
+  [2] =&gt; string(13) &quot;STORE_default&quot;
+  [3] =&gt; string(30) &quot;THEME_frontend_academy_default&quot;
+  [4] =&gt; string(15) &quot;cms_index_index&quot;
+  [5] =&gt; string(22) &quot;page_two_columns_right&quot;
+  [6] =&gt; string(19) &quot;customer_logged_out&quot;
+}
+</pre>

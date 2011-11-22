@@ -1,0 +1,31 @@
+<h2><?php echo $this->__($this->getTexto());?></h2>
+<h2><?php //echo Mage::helper('checkout')>__($this->getTexto());?></h2>
+<?php /**
+$this->__($this->getTexto()); esta haciendo la traduccion asociada a la clase que defino el bloque
+esta plantilla esta asociada con un bloque del tipo core/template como se definio en el layout
+<block type="core/template" name="hello.producto"  template="academy/holamundo.phtml">
+                	<action method="setTexto"><texto>Hello producto!!</texto></action>
+            </block>
+            
+            si quisiera utilizar la traduccion de otro módulo tengo que usarlo de la siguiente manera
+            
+            Mage::helper('checkout')>__($this->getTexto()));
+*
+*/
+ ?>
+<img src="<?php echo $this->getSkinUrl('images/media/best_selling_img01.jpg')?>" alt=""/>
+<?php //echo $this->__('Son las %s','6PM')?>
+<?php /*
+pondria el parámetro 6PM en sustitución de %s
+*
+*/?>
+<?php 
+/*traduccion de multiples parámetros
+ * 
+ * */
+echo $this->__('Son las %1$s %2$s','6PM', $this->__('hoy') );
+/*si uno de los parámetros son decimales
+ * Esta usando los validadores de printf.
+ * */
+echo $this->__('Son las %f','8.20');
+?>
