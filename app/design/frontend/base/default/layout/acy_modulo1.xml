@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout>
+	<default>
+		<reference name="right">
+			<block type="acy_modulo1/date" name="right.fecha" template="acymodulo1/date.phtml"/>
+		</reference>
+	</default>
+</layout>
+<!-- 
+el nombre se formaría de la siguiente manera
+acy_modulo1=> Academy_Modulo1_Block
+date=> Date
+acy_modulo1/date => al leer esto Magento, hará un split entre el /  , con lo cual
+cada vez que haga un _ despues del / descenderia en la estructura de carpetas.
+por ejemplo para el bloque otro deberia de ser di la sigueinte manera.
+
+acy_modulo1/otro_bloque 
+acy_modulo1=> Academy_Modulo1_Block
+otro_bloque=> otro/bloque
+
+ para hacer una declaracion de Clase 
+ al hacer algo como new Academy_Modulo1_Block_Data()
+ Magento va a usar el autoload y entrará en las carpetas de Academy/Modulo1/Block/Data
+ -->

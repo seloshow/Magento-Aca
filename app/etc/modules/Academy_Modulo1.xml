@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+	<modules>
+		<Academy_Modulo1><!-- Solo con esta definicion ya lo toma en cuenta Magento. -->
+			<active>true</active>
+			<codePool>local</codePool>
+		</Academy_Modulo1>
+	</modules>
+</config>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+	<modules>
+		<Academy_Modulo1><!-- debe de ser igual a lo que hemos declarado en el archivo app/etc/modules. -->
+			<!-- Ahora quieren que el número de version este relacionado con la version de Magetno.  los tres primeros
+			digitos son los que mas relacion van a tener con la version de Magento, el último relacionado con la version del módulo -->
+			<version>1.6.0.0</version>
+		</Academy_Modulo1>
+	</modules>
+	<global>
+		<blocks>
+			<acy_modulo1><!-- Esto es alias de tu módulo.por es el mismo nombre en todo el xml -->
+			<!-- este nombre tiene que ser el mismo  para la definicion del bloque como para
+			la actualización del layout.
+			 -->
+				<class>Academy_Modulo1_Block</class>
+			</acy_modulo1>
+		</blocks>
+	</global>
+	<frontend>
+		<layout>
+			<updates>
+			<!-- me permite crear un archivo de modificación de layout. -->
+			<!-- asi es como decimos que tome mi layout. -->
+				<acy_modulo1>
+					<file>acy_modulo1.xml</file>
+					<!-- Este archivo es mejor ponerlo en el layout de base, dado que lo va a encontrar siempre
+					por que va a caer en el final del sistema de cascada de Magento.
+					file: es el archivo que será buscado en el layout. -->
+				</acy_modulo1>
+			</updates>
+		</layout>
+	</frontend>
+	
+</config>

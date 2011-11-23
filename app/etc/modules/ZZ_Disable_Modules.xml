@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+    <modules>
+        <Mage_Poll>
+            <active>false</active>
+        </Mage_Poll>
+       </modules>
+</config>
