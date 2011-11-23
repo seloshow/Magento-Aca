@@ -5,7 +5,7 @@ class Academy_Modulo1_Block_Date extends Mage_Core_Block_Template{
 	 * el mismo nombre que la estructura de carpetas.
 	 * extiendo de esta clase si quiero que tenga asociada una plantilla.
 	 * */
-	function getFecha(){
+	public function getFecha(){
 		return '23 nobiembre 2011';
 	}
 	

@@ -4,6 +4,10 @@
 		<Academy_Modulo1><!-- Solo con esta definicion ya lo toma en cuenta Magento. -->
 			<active>true</active>
 			<codePool>local</codePool>
+			<depends><!-- dice que modulos van a cargar antes que mi modulo -->
+				<Mage_Customer/>
+				<Mage_Catalog/>
+			</depends>
 		</Academy_Modulo1>
 	</modules>
 </config>

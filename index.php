@@ -65,7 +65,7 @@ require_once $mageFilename;
 
 if (isset($_SERVER['MAGE_IS_DEVELOPER_MODE'])) {
 	Varien_Profiler::enable();
-    Mage::setIsDeveloperMode(true);
+    Mage::setIsDeveloperMode(true);//Magento no va a meter los errores en un log y va a mostrarlos por pantalla
     ini_set('display_errors', 1);
 }
 

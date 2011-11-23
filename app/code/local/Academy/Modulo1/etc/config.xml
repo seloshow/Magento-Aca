@@ -8,6 +8,7 @@
 		</Academy_Modulo1>
 	</modules>
 	<global>
+	<!-- Esto lo tengo que configurar una única vez, dado que las demas veces ya  -->
 		<blocks>
 			<acy_modulo1><!-- Esto es alias de tu módulo.por es el mismo nombre en todo el xml -->
 			<!-- este nombre tiene que ser el mismo  para la definicion del bloque como para
@@ -30,6 +31,21 @@
 				</acy_modulo1>
 			</updates>
 		</layout>
+		 <routers>
+            <academy>
+                <use>standard</use>
+                <args>
+                    <module>Academy_Modulo1</module>
+                    <frontName>academy</frontName>
+                </args>
+            </academy>
+        </routers>
 	</frontend>
 	
 </config>
+<!-- 
+academy/blog/view
+academy=> "Academy_Modulo1"
+blog =>   Blog + Controller =>BlogController
+view =>   view + Action =>método viewAction
+ -->
