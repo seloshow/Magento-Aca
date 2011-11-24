@@ -1,4 +1,10 @@
 <h1>Blog View</h1>
-<?php $_blogPost=$this->getBlogPost();?>
-<p><?php echo $_blogPost->getTitle();?><?php ?>
-<p><?php echo $_blogPost->getContent();?>
+<?php //$_blogPost=$this->getBlogPost();?>
+<p><?php //echo $_blogPost->getTitle();?><?php ?>
+<p><?php //echo $_blogPost->getContent();?>
+<?php $coll=$this->getBlogPostCollection();?>
+<?php //print_r($coll);exit;?>
+<?php foreach ($coll as $_blogpost):?>
+	<h2><?php echo $_blogpost->getTitle();?></h2>
+	<p><?php echo $_blogpost->getContent();?></p>
+<?php endforeach;?>

@@ -30,13 +30,17 @@ class Academy_Modulo1_BlogController extends Academy_Modulo1_Controller_Action//
 		$blogPost=Mage::getModel('acy_modulo1/blog_post');
 		// antes de "/" se va a buscar el namespace del config.xml
 		// despues del / va a entrar en carpetas cada vez que encuentre "_"
-		$blogPost->setTitle('Mi primer blog post');//llamamos a los metodos mágicos de Magento, y seteamos el titulo.
-		$blogPost->setContent('lorem ipsum dolor.....');//llamamos al método mágico de Magento.
-		
-		// ahora voy a pasar los datos a mi plantillas phtml
+		//$blogPost->setTitle('Mi primer blog post');//llamamos a los metodos mágicos de Magento, y seteamos el titulo.
+		//$blogPost->setContent('lorem ipsum dolor.....');//llamamos al método mágico de Magento.
+		$coll=$blogPost->getCollection();
 		$miBloque=$this->getLayout()->getBlock('blog.view');
+		$miBloque->setBlogPostCollection($coll);
+		// ahora voy a pasar los datos a mi plantillas phtml
+		
+		
 		//echo get_class($blogPost);exit;
-		$miBloque->setBlogPost($blogPost);
+		
+		
 		
 		$this->renderLayout();
 	}
@@ -59,6 +63,13 @@ class Academy_Modulo1_BlogController extends Academy_Modulo1_Controller_Action//
 		$this->renderLayout();// renderiza(imprime) el layout.
 		// cargará el layout de la pila de handles
 		
+	}
+	public function newAction(){
+		$blogPost = Mage::getModel('acy_modulo1/blog_post');
+		$blogPost->setTitle('Un nuevo blog post');
+		$blogPost->setContent('Lorem ipsum dolor.....');
+		$blogPost->save();
+		$this->_redirect('*/*/view');
 	}
 	
 	public function saveAction()
