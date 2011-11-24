@@ -30,11 +30,12 @@ class Academy_Modulo1_BlogController extends Academy_Modulo1_Controller_Action//
 		$blogPost=Mage::getModel('acy_modulo1/blog_post');
 		// antes de "/" se va a buscar el namespace del config.xml
 		// despues del / va a entrar en carpetas cada vez que encuentre "_"
-		$blogPost->setTitle('Mi primer blog post');
-		$blogPost->setContent('lorem upsum dolor.....');
+		$blogPost->setTitle('Mi primer blog post');//llamamos a los metodos mágicos de Magento, y seteamos el titulo.
+		$blogPost->setContent('lorem ipsum dolor.....');//llamamos al método mágico de Magento.
 		
 		// ahora voy a pasar los datos a mi plantillas phtml
 		$miBloque=$this->getLayout()->getBlock('blog.view');
+		//echo get_class($blogPost);exit;
 		$miBloque->setBlogPost($blogPost);
 		
 		$this->renderLayout();
