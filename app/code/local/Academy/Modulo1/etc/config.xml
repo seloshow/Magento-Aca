@@ -24,8 +24,7 @@
 				abajo. -->
 			</acy_modulo1>
 			<acy_modulo1_resource>
-                <class>Academy_Modulo1_Model</class>
-                <resourceModel>acy_modulo1_resource</resourceModel>
+                <class>Academy_Modulo1_Model_Resource</class>
                 <entities>
                     <blog_post>
                         <table>blog_post</table>

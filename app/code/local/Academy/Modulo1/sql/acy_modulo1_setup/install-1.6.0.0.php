@@ -1,5 +1,5 @@
 <?php
-
+//die('llega');
 //print("salta el instalador");exit;
 /* @var $installer Mage_Core_Model_Resource_Setup */
 $installer = $this;
