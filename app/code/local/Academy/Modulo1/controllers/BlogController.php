@@ -1,5 +1,6 @@
 <?php
-class Academy_Modulo1_BlogController extends Mage_Core_Controller_Front_Action
+//require_once('app/code/core/Mage/Checkout/controllers/CartController.php');
+class Academy_Modulo1_BlogController extends Academy_Modulo1_Controller_Action//Mage_Checkout_CartController
 {
 	public function indexAction(){
 		//echo 'hello index del blogController';
@@ -25,13 +26,38 @@ class Academy_Modulo1_BlogController extends Mage_Core_Controller_Front_Action
 	}
 	public function viewAction()
 	{
+		$this->loadLayout();
+		$blogPost=Mage::getModel('acy_modulo1/blog_post');
+		// antes de "/" se va a buscar el namespace del config.xml
+		// despues del / va a entrar en carpetas cada vez que encuentre "_"
+		$blogPost->setTitle('Mi primer blog post');
+		$blogPost->setContent('lorem upsum dolor.....');
+		
+		// ahora voy a pasar los datos a mi plantillas phtml
+		$miBloque=$this->getLayout()->getBlock('blog.view');
+		$miBloque->setBlogPost($blogPost);
+		
+		$this->renderLayout();
+	}
+	public function loadAndDisplayProductAction(){
 		$this->loadLayout();//carga el layout 
 		//$handles=$this->getLayout()->getUpdate()->getHandles();
 		//Zend_Debug::dump($handles);exit;
 		//echo 'view';
-		$this->loadLayout();//carga el layout 
+		
+		/*Para cargarlo mediante el controlador*/
+		//si el bloque no va a ser usado en ningun lado mas , está bien hacerlo en el controlados
+		//si necesito pintarlo en el lado derecho no lo voy a hacer en el controlador, lo haría en el bloque
+		//$product=Mage::getModel('catalog/product');
+		//$product->load(162);
+		//$miBloque=$this->getLayout()->getBlock('blog.view');
+		//$miBloque->setProduct($product);
+		//echo get_class($miBloque);die;
+		/*Para cargarlo mediante el controlador*/
+		
 		$this->renderLayout();// renderiza(imprime) el layout.
 		// cargará el layout de la pila de handles
+		
 	}
 	
 	public function saveAction()

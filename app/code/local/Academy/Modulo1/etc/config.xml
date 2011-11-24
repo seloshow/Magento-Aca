@@ -17,7 +17,13 @@
 				<class>Academy_Modulo1_Block</class>
 			</acy_modulo1>
 		</blocks>
+		<models>
+			<acy_modulo1><!-- Utilizo la misma clase que para los bloques. -->
+				<class>Academy_Modulo1_Model</class><!-- Ya tengo una raiz de clases de tipo modelo para todo mi módulo. -->
+			</acy_modulo1>
+		</models>
 	</global>
+	
 	<frontend>
 		<layout>
 			<updates>

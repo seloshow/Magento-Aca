@@ -21,6 +21,19 @@
 			 -->
 		</reference>
 	</academy_blog_view>
+	<academy_blog_loadanddisplayproduct>
+		<reference name="content"><!-- aqui si añado contenido a un bloque estructural no haria falta hacer un getChild
+		sin embargo si lo hago a un bloque de contenido , deberia de poner el getchild , dado que los bloques de contenido 
+		por defecto no lo hacen solos
+		 -->
+			<block type="acy_modulo1/blog_view" name="blog.view" template="acymodulo1/blog/view.phtml"/>
+			<!-- si solo quiero mostrar una salida, el bloque sería de tipo core/template y añadiriamos nuestro templar que muestre algo. -->
+			<!-- mas o menos seguimos este patron, seguimos la misma ruta que para los controller -->
+			<!-- El bloque que hace referencia a este bloque es 
+			Academy_Modulo_Block_Blog_View
+			 -->
+		</reference>
+	</academy_blog_loadanddisplayproduct>
 </layout>
 <!-- 
 el nombre se formaría de la siguiente manera
