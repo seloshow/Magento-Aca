@@ -31,8 +31,24 @@
                     </blog_post>
                 </entities>
          	</acy_modulo1_resource>
+         	<catalog>
+         		<rewrite>
+         			<product>Academy_Modulo1_Model_Product</product>
+         			<!-- 
+         			Donde hace Mage::getModel('catalog/product') le voy a decir que no utilice la clase
+         			Mage_Catalog_Model_Product
+         			y que utilice
+         			Academy_Modulo_Model_Product
+         			 -->
+         		</rewrite>
+         	</catalog>
 		
 		</models>
+		<helpers>
+				<acy_modulo1>
+					<class>Academy_Modulo1_Helper</class>
+				</acy_modulo1>
+		</helpers>
 		<resources>
             <acy_modulo1_setup>
                 <setup>
@@ -40,6 +56,29 @@
                 </setup>
             </acy_modulo1_setup>
         </resources>
+		<events>
+			<admin_session_user_login_failed>
+				<observers>
+					<acy_modulo1_login_failed><!-- este nodo tiene que ser únido -->
+						<class>acy_modulo1/observer</class><!-- Magento lo va a interpretar como para los bloques y modelos
+						como si fuera getModel -->
+						<method>miMetodo</method>
+					</acy_modulo1_login_failed>
+				</observers>
+			</admin_session_user_login_failed>
+			<catalog_product_save_before>
+				<observers>
+					<antes_salvar_producto>
+							<class>acy_modulo1/observer</class>
+							<method>beforeSaveProduct</method>
+					</antes_salvar_producto>
+				</observers>
+			</catalog_product_save_before>
+			<!--  <acy_modulo1_blog_post_save_before>
+			
+			</acy_modulo1_blog_post_save_before>-->
+		</events>
+	
 	</global>
 	
 	<frontend>
@@ -64,6 +103,16 @@
                 </args>
             </academy>
         </routers>
+        <translate>
+        	<modules>
+        		<Academy_Modulo1>
+        			<files>
+        				<default>Academy_Modulo1.csv</default>
+        				<!-- Mejor que se llame como el módulo. -->
+        			</files>
+        		</Academy_Modulo1>
+        	</modules>
+        </translate>
 	</frontend>
 	
 </config>

@@ -33,7 +33,6 @@ class Academy_Modulo1_BlogController extends Academy_Modulo1_Controller_Action//
 		//$blogPost->setTitle('Mi primer blog post');//llamamos a los metodos mágicos de Magento, y seteamos el titulo.
 		//$blogPost->setContent('lorem ipsum dolor.....');//llamamos al método mágico de Magento.
 		$coll=$blogPost->getCollection();
-		
 		$miBloque=$this->getLayout()->getBlock('blog.view');
 		$miBloque->setBlogPostCollection($coll);
 		
