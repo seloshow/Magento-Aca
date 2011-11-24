@@ -4,7 +4,7 @@
 		<Academy_Modulo1><!-- debe de ser igual a lo que hemos declarado en el archivo app/etc/modules. -->
 			<!-- Ahora quieren que el número de version este relacionado con la version de Magetno.  los tres primeros
 			digitos son los que mas relacion van a tener con la version de Magento, el último relacionado con la version del módulo -->
-			<version>1.6.0.0</version>
+			<version>1.6.0.0</version><!-- El número que tengo en el fichero de instalación debe corresponder con la version de mi módulo. -->
 		</Academy_Modulo1>
 	</modules>
 	<global>
@@ -20,6 +20,8 @@
 		<models>
 			<acy_modulo1><!-- Utilizo la misma clase que para los bloques. -->
 				<class>Academy_Modulo1_Model</class><!-- Ya tengo una raiz de clases de tipo modelo para todo mi módulo. -->
+				<resourceModel>acy_modulo1_resource</resourceModel><!-- aquí tengo que poner la asociación con el modelo de recurso que tiene que ser el mismo nombre que el de 
+				abajo. -->
 			</acy_modulo1>
 			<acy_modulo1_resource>
                 <class>Academy_Modulo1_Model</class>
@@ -32,7 +34,13 @@
          	</acy_modulo1_resource>
 		
 		</models>
-		
+		<resources>
+            <acy_modulo1_setup>
+                <setup>
+                    <module>Academy_Modulo1</module>
+                </setup>
+            </acy_modulo1_setup>
+        </resources>
 	</global>
 	
 	<frontend>
