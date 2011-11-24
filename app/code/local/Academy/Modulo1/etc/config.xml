@@ -21,7 +21,18 @@
 			<acy_modulo1><!-- Utilizo la misma clase que para los bloques. -->
 				<class>Academy_Modulo1_Model</class><!-- Ya tengo una raiz de clases de tipo modelo para todo mi módulo. -->
 			</acy_modulo1>
+			<acy_modulo1_resource>
+                <class>Academy_Modulo1_Model</class>
+                <resourceModel>acy_modulo1_resource</resourceModel>
+                <entities>
+                    <blog_post>
+                        <table>blog_post</table>
+                    </blog_post>
+                </entities>
+         	</acy_modulo1_resource>
+		
 		</models>
+		
 	</global>
 	
 	<frontend>
