@@ -292,7 +292,6 @@ class Mage_Checkout_OnepageController extends Mage_Checkout_Controller_Action
      */
     public function saveBillingAction()
     {
-    	
         if ($this->_expireAjax()) {
             return;
         }

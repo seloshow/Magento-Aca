@@ -31,17 +31,17 @@
                     </blog_post>
                 </entities>
          	</acy_modulo1_resource>
-         	<catalog>
+         	<!--  <catalog>
          		<rewrite>
          			<product>Academy_Modulo1_Model_Product</product>
-         			<!-- 
+         			 
          			Donde hace Mage::getModel('catalog/product') le voy a decir que no utilice la clase
          			Mage_Catalog_Model_Product
          			y que utilice
          			Academy_Modulo_Model_Product
-         			 -->
+         			 
          		</rewrite>
-         	</catalog>
+         	</catalog>-->
 		
 		</models>
 		<helpers>

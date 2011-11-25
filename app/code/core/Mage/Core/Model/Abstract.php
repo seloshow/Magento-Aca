@@ -118,7 +118,6 @@ abstract class Mage_Core_Model_Abstract extends Varien_Object
      */
     protected function _setResourceModel($resourceName, $resourceCollectionName=null)
     {
-    	Mage::log("$resourceName");
         $this->_resourceName = $resourceName;
         if (is_null($resourceCollectionName)) {
             $resourceCollectionName = $resourceName.'_collection';
